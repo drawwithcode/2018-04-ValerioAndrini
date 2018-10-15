@@ -17,7 +17,7 @@ var colors = [
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  frameRate(10);
+  frameRate(60);
 }
 
 function mousePressed() {
@@ -27,8 +27,8 @@ function mousePressed() {
 
     var myBall = new Ball(mouseX, mouseY, 10);
     myBall.d = random(10, 50);
-    myBall.speed1 = random(-5, 5);
-    myBall.speed2 = random(-5, 5);
+    myBall.speed1 = random(-1, 1);
+    myBall.speed2 = random(-1, 1);
     myBall.color = color(random(colors));
     balls.push(myBall);
   }
@@ -36,7 +36,7 @@ function mousePressed() {
 
 function draw() {
 
-  background(0);
+  background('#17202A');
   fill('white');
   text('Click to see magic happen', windowWidth/2-50, height/8*7);
   //inserire new ball per effetto continuo
